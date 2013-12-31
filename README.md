@@ -1,4 +1,4 @@
-# angular-off-canvas
+# angular-off-canvas [![Build Status](https://travis-ci.org/cironunes/angular-off-canvas.png)](https://travis-ci.org/cironunes/angular-off-canvas)
 
 A off-canvas nav factory service for AngularJS that makes it easy to add off-canvas navs to your app.
 
