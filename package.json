@@ -1,0 +1,34 @@
+{
+  "name": "angular-off-canvas",
+  "version": "0.0.1",
+  "description": "easily add a off-canvas navigation to your angular app",
+  "main": "off-canvas.js",
+  "scripts": {
+    "test": "./node_modules/.bin/bower install && ./node_modules/.bin/karma start karma-unit-conf.js --browsers Firefox --single-run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/cironunes/angular-off-canvas.git"
+  },
+  "keywords": [
+    "angular",
+    "angularjs",
+    "off-canvas",
+    "navigation",
+    "responsive"
+  ],
+  "author": "Ciro Nunes",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cironunes/angular-off-canvas/issues"
+  },
+  "devDependencies": {
+    "karma": "~0.11.12",
+    "karma-jasmine": "~0.1.5",
+    "karma-chrome-launcher": "~0.1.2",
+    "karma-ie-launcher": "~0.1.1",
+    "karma-firefox-launcher": "~0.1.3",
+    "karma-junit-reporter": "~0.2.1",
+    "karma-ng-html2js-preprocessor": "~0.1.0"
+  }
+}

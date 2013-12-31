@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Demo: cn.offCanvas</title>
+	<link rel="stylesheet" href="off-canvas.css">
+	<style>
+		.off-canvas__nav {
+			position: absolute;
+			left: 0;
+			top: 0;
+
+			background: black;
+			width: 250px;
+			height: 100%;
+		}
+	</style>
+</head>
+<body ng-app="demoApp" ng-controller="DemoCtrl as demo">
+	<div class="off-canvas__content">
+		<header>
+			<button ng-click="demo.toggle()">toggle</button>
+			<h1>cn.offCanvas</h1>
+		</header>
+		<div>
+			<p>content</p>
+		</div>
+	</div>
+
+	<script src="bower_components/angular/angular.js"></script>
+	<script src="off-canvas.js"></script>
+	<script>
+		angular.module('demoApp', ['cn.offCanvas'])
+			.factory('demoOffCanvas', function(cnOffCanvas) {
+				return cnOffCanvas({
+					template: '<nav class="off-canvas__nav">nav</nav>'
+				})
+			})
+			.controller('DemoCtrl', function(demoOffCanvas) {
+				this.toggle = demoOffCanvas.toggle;
+			})
+	</script>
+</body>
+</html>
