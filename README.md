@@ -2,8 +2,6 @@
 
 A off-canvas nav factory service for AngularJS that makes it easy to add off-canvas navs to your app.
 
-[live demo](http://plnkr.co/edit/lJDNqafSCKdpMI8AjR0B?p=preview)
-
 ## Install
 
 ```shell
