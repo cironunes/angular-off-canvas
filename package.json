@@ -1,7 +1,7 @@
 {
   "name": "angular-off-canvas",
   "version": "0.0.1",
-  "description": "easily add a off-canvas navigation to your angular app",
+  "description": "easily add an off-canvas navigation to your angular app",
   "main": "off-canvas.js",
   "scripts": {
     "test": "./node_modules/.bin/bower install && ./node_modules/.bin/karma start karma.conf.js --browsers Firefox --single-run"
