@@ -1,0 +1,26 @@
+/*
+ * angular-off-canvas v0.0.1
+ * (c) 2013 Ciro Nunes http://cironunes.github.io/
+ * License: MIT
+ */
+
+$off-canvas-transition: all .3s cubic-bezier(.16,.63,.45,.98) !default
+$off-canvas-size:				250px !default
+
+/* prevent horizontal scroll */
+html, body
+	overflow-x: hidden
+
+.off-canvas__nav
+	-webkit-transform: translate3d(0,0,0) translateX(-$off-canvas-size)
+	-webkit-transition: $off-canvas-transition
+
+.off-canvas__content
+	-webkit-transform: translate3d(0,0,0) translateX(0)
+	-webkit-transition: $off-canvas-transition
+
+.is-off-canvas-opened .off-canvas__nav
+	-webkit-transform: translate3d(0,0,0) translateX(0)
+
+.is-off-canvas-opened .off-canvas__content
+	-webkit-transform: translate3d(0, 0, 0) translate($off-canvas-size)
