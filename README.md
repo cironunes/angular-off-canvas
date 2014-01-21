@@ -1,6 +1,7 @@
 # angular-off-canvas [![Build Status](https://travis-ci.org/cironunes/angular-off-canvas.png)](https://travis-ci.org/cironunes/angular-off-canvas)
 
 An off-canvas nav factory service for AngularJS that makes it easy to add off-canvas navs to your app.
+[Plunker demo](http://plnkr.co/edit/arcXHcQgdWiHVB2a7IXA?p=preview)
 
 ## Install
 
@@ -12,8 +13,6 @@ bower install angular-off-canvas
 1. Include the `off-canvas.js` script provided by this component into your app.
 2. *Optional:* Include the `off-canvas.css` style provided by this component into your html.
 3. Add `cn.offCanvas` as a module dependency to your app.
-
-
 
 ### Typical Use
 
