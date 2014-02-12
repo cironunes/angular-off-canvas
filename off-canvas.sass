@@ -4,23 +4,37 @@
  * License: MIT
  */
 
+// Variables
+// ----------
 $off-canvas-transition: all .3s cubic-bezier(.16,.63,.45,.98) !default
 $off-canvas-size:				250px !default
+
+// Mixins
+// ----------
+// http://www.stefanwienert.net/blog/2012/05/18/easy-css-vendor-prefix-mixin-for-sass/
+= vendor-prefix($name, $argument)
+	-webkit-#{$name}: #{$argument}
+	-ms-#{$name}: #{$argument}
+	-moz-#{$name}: #{$argument}
+	-o-#{$name}: #{$argument}
+	#{$name}: #{$argument}
+
+
 
 /* prevent horizontal scroll */
 html, body
 	overflow-x: hidden
 
 .off-canvas__nav
-	-webkit-transform: translate3d(0,0,0) translateX(-$off-canvas-size)
-	-webkit-transition: $off-canvas-transition
+	+vendor-prefix(transform, translate3d(0,0,0) translateX(-$off-canvas-size))
+	+vendor-prefix(transition, $off-canvas-transition)
 
 .off-canvas__content
-	-webkit-transform: translate3d(0,0,0) translateX(0)
-	-webkit-transition: $off-canvas-transition
+	+vendor-prefix(transform, translate3d(0,0,0) translateX(0))
+	+vendor-prefix(transition, $off-canvas-transition)
 
 .is-off-canvas-opened .off-canvas__nav
-	-webkit-transform: translate3d(0,0,0) translateX(0)
+	+vendor-prefix(transform, translate3d(0,0,0) translateX(0))
 
 .is-off-canvas-opened .off-canvas__content
-	-webkit-transform: translate3d(0, 0, 0) translate($off-canvas-size)
+	+vendor-prefix(transform, translate3d(0, 0, 0) translate($off-canvas-size))

@@ -1,28 +1,45 @@
-/*
- * angular-off-canvas v0.0.1
+/* angular-off-canvas v0.0.1
  * (c) 2013 Ciro Nunes http://cironunes.github.io/
  * License: MIT
  */
-
 /* prevent horizontal scroll */
 html, body {
-  overflow-x: hidden;
-}
+  overflow-x: hidden; }
 
 .off-canvas__nav {
-	-webkit-transform: translate3d(0,0,0) translateX(-250px);
-  -webkit-transition: all .3s cubic-bezier(.16,.63,.45,.98);
-}
+  -webkit-transform: translate3d(0, 0, 0) translateX(-250px);
+  -ms-transform: translate3d(0, 0, 0) translateX(-250px);
+  -moz-transform: translate3d(0, 0, 0) translateX(-250px);
+  -o-transform: translate3d(0, 0, 0) translateX(-250px);
+  transform: translate3d(0, 0, 0) translateX(-250px);
+  -webkit-transition: all 0.3s cubic-bezier(0.16, 0.63, 0.45, 0.98);
+  -ms-transition: all 0.3s cubic-bezier(0.16, 0.63, 0.45, 0.98);
+  -moz-transition: all 0.3s cubic-bezier(0.16, 0.63, 0.45, 0.98);
+  -o-transition: all 0.3s cubic-bezier(0.16, 0.63, 0.45, 0.98);
+  transition: all 0.3s cubic-bezier(0.16, 0.63, 0.45, 0.98); }
 
 .off-canvas__content {
-	-webkit-transition: all .3s cubic-bezier(.16,.63,.45,.98);
-  -webkit-transform: translate3d(0,0,0) translateX(0);
-}
+  -webkit-transform: translate3d(0, 0, 0) translateX(0);
+  -ms-transform: translate3d(0, 0, 0) translateX(0);
+  -moz-transform: translate3d(0, 0, 0) translateX(0);
+  -o-transform: translate3d(0, 0, 0) translateX(0);
+  transform: translate3d(0, 0, 0) translateX(0);
+  -webkit-transition: all 0.3s cubic-bezier(0.16, 0.63, 0.45, 0.98);
+  -ms-transition: all 0.3s cubic-bezier(0.16, 0.63, 0.45, 0.98);
+  -moz-transition: all 0.3s cubic-bezier(0.16, 0.63, 0.45, 0.98);
+  -o-transition: all 0.3s cubic-bezier(0.16, 0.63, 0.45, 0.98);
+  transition: all 0.3s cubic-bezier(0.16, 0.63, 0.45, 0.98); }
 
 .is-off-canvas-opened .off-canvas__nav {
-	-webkit-transform: translate3d(0,0,0) translateX(0);
-}
+  -webkit-transform: translate3d(0, 0, 0) translateX(0);
+  -ms-transform: translate3d(0, 0, 0) translateX(0);
+  -moz-transform: translate3d(0, 0, 0) translateX(0);
+  -o-transform: translate3d(0, 0, 0) translateX(0);
+  transform: translate3d(0, 0, 0) translateX(0); }
 
 .is-off-canvas-opened .off-canvas__content {
-	-webkit-transform: translate3d(0, 0, 0) translate(250px);
-}
+  -webkit-transform: translate3d(0, 0, 0) translate(250px);
+  -ms-transform: translate3d(0, 0, 0) translate(250px);
+  -moz-transform: translate3d(0, 0, 0) translate(250px);
+  -o-transform: translate3d(0, 0, 0) translate(250px);
+  transform: translate3d(0, 0, 0) translate(250px); }
