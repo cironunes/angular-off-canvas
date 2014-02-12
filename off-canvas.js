@@ -1,5 +1,5 @@
 /*
- * angular-off-canvas v0.0.1
+ * angular-off-canvas v0.1.0
  * (c) 2013 Ciro Nunes http://cironunes.github.io/
  * License: MIT
  */
