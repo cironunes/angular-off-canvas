@@ -7,6 +7,7 @@ html, body {
   overflow-x: hidden; }
 
 .off-canvas__nav {
+  width: 250px;
   -webkit-transform: translate3d(0, 0, 0) translateX(-250px);
   -ms-transform: translate3d(0, 0, 0) translateX(-250px);
   -moz-transform: translate3d(0, 0, 0) translateX(-250px);
