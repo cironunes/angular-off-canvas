@@ -19,7 +19,7 @@ bower install angular-off-canvas
 > app.js
 
 ```javascript
-angular.module('myApp', []).
+angular.module('myApp', ['cn.offCanvas']).
 
 // let's make a nav called `myOffCanvas`
 factory('myOffCanvas', function (cnOffCanvas) {
