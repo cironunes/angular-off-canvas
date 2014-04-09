@@ -66,7 +66,7 @@ the controller, but inlining these options might be more pragmatic for cases whe
 controller is just a couple lines.
 
 ```javascript
-angular.module('myApp', []).
+angular.module('myApp', ['cn.offCanvas']).
 
 // let's make a nav called myOffCanvas
 factory('myOffCanvas', function (btfModal) {
