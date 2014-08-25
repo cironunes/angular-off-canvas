@@ -23,7 +23,7 @@
     "url": "https://github.com/cironunes/angular-off-canvas/issues"
   },
   "devDependencies": {
-    "bower": "~1.2.8",
+    "bower": "~1.3.9",
     "karma": "~0.10",
     "karma-jasmine": "~0.1.5",
     "karma-chrome-launcher": "~0.1.2",
