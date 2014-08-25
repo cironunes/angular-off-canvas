@@ -19,6 +19,7 @@ angular.module('cn.offCanvas', [])
 				controller = config.controller || angular.noop,
 				controllerAs = config.controllerAs,
 				element = null,
+				promise = null,
 				html;
 
 			if(config.template) {
@@ -45,12 +46,37 @@ angular.module('cn.offCanvas', [])
 			})
 
 			function toggle() {
-				this.isOpened = !this.isOpened;
-				container.toggleClass(containerClass);
+				if (this.isOpened) {
+					return this.close();
+				} else {
+					return this.open();
+				}
+			}
+
+			function open() {
+				if (!this.isOpened) {
+					this.isOpened = true;
+					container.toggleClass(containerClass);
+				}
+				promise = $q.defer();
+				return promise.promise;
+			}
+
+			function close() {
+				if (this.isOpened) {
+					this.isOpened = false;
+					container.toggleClass(containerClass);
+				}
+				promise.resolve();
+				var defered = $q.defer();
+				defered.reject();
+				return defered.promise;
 			}
 
 			return {
 				toggle: toggle,
+				open: open,
+				close: close,
 				isOpened: false
 			}
 		}

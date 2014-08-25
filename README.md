@@ -90,6 +90,31 @@ controller('MyCtrl', function (myOffCanvas) {
 </div>
 ```
 
+### Promises
+
+When the menu is opened with toggle(), it will return a promise that is resolved when the menu is closed.
+
+```javascript
+myOffCanvas.toggle()
+  .then(function() {
+    console.log('The menu has been closed!');
+  });
+
+myOffCanvas.toggle(); // The menu will close and display the message.
+```
+
+If the menu is already opened, then the promise will be immediately rejected.
+
+```javascript
+myOffCanvas.toggle(); // The menu will open and nothing will be displayed in the console.
+myOffCanvas.toggle()
+  .then(function() {
+    console.log('The menu has been closed!');
+  }, function() {
+    console.log('The menu was already opened.');
+  }); // The menu will close and the message "The menu was already open" will be displayed immediately.
+```
+
 
 ## API
 
@@ -136,7 +161,8 @@ A `navService` has just two methods: `activate` and `deactivate`.
 
 #### `navService.toggle`
 
-Add or remove a class to open/hide the nav with CSS
+Add or remove a class to open/hide the nav with CSS.
+Returns a promise that will be resolved when the off canvas menu closes, or is immediately rejected if the toggle closes an already opened menu.
 
 ## Contributing
 

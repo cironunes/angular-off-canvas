@@ -111,4 +111,44 @@ describe('cnOffCanvas', function() {
       expect(container.hasClass('is-opened-nav')).toBeTruthy();
     });
   });
+
+  describe('promises', function() {
+    var offCanvas;
+    beforeEach(function() {
+      offCanvas = cnOffCanvas({
+        templateUrl: 'test.html',
+        container: container
+      });
+    });
+    it('should be created on toggle', function() {
+      var promise = offCanvas.toggle();
+      expect(promise).toBeDefined();
+      promise = offCanvas.toggle();
+      expect(promise).toBeDefined();
+    });
+
+    it('should be resolved after closed', inject(function($rootScope) {
+      var resolved = false;
+      offCanvas.toggle()
+        .then(function() {
+          resolved = true;
+        });
+      expect(resolved).toBe(false);
+      offCanvas.toggle();
+      $rootScope.$apply();
+      expect(resolved).toBe(true);
+    }));
+
+    it('should be rejected if the toggle closes', inject(function($rootScope) {
+      offCanvas.toggle();
+      var result = "nothing";
+      offCanvas.toggle()
+        .then(function() {
+          resolved = "success";
+        }, function() {
+          resolved = "rejected";
+        });
+        expect(resolved).toBe("rejected");
+    }));
+  });
 });
