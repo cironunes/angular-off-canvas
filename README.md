@@ -138,6 +138,10 @@ A `navService` has just two methods: `activate` and `deactivate`.
 
 Add or remove a class to open/hide the nav with CSS
 
+## Contributing
+
+Please see the [contributing guidelines](https://github.com/cironunes/angular-off-canvas/blob/master/CONTRIBUTING.md)
+
 ## Tests
 
 You can run the tests with [`karma`](http://karma-runner.github.io/0.10/index.html):
