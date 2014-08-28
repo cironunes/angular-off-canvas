@@ -1,5 +1,5 @@
 var gulp = require('gulp');
-var ngmin = require('gulp-ngmin');
+var ngAnnotate = require('gulp-ng-annotate');
 var rename = require('gulp-rename');
 var uglify = require('gulp-uglify');
 
@@ -9,7 +9,7 @@ var paths = {
 
 gulp.task('default', function() {
   return gulp.src(paths.scripts)
-    .pipe(ngmin())
+    .pipe(ngAnnotate())
     .pipe(rename({suffix: '.min'}))
     .pipe(uglify({mangle: false}))
     .pipe(gulp.dest('.'));
