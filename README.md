@@ -1,4 +1,6 @@
-# angular-off-canvas [![Build Status](https://travis-ci.org/cironunes/angular-off-canvas.svg)](https://travis-ci.org/cironunes/angular-off-canvas)
+# angular-off-canvas 
+[![Build Status](https://travis-ci.org/cironunes/angular-off-canvas.svg)](https://travis-ci.org/cironunes/angular-off-canvas) 
+[![](https://david-dm.org/cironunes/angular-off-canvas/dev-status.svg)](https://david-dm.org/cironunes/angular-off-canvas#info=devDependencies&view=table)
 
 An off-canvas nav factory service for AngularJS that makes it easy to add off-canvas navs to your app.
 [Plunker demo](http://plnkr.co/edit/arcXHcQgdWiHVB2a7IXA?p=preview)
