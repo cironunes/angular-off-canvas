@@ -134,11 +134,11 @@ Unless the template is very simple, you should probably use `config.templateUrl`
 
 ### `navService`
 
-A `navService` has just two methods: `activate` and `deactivate`.
+A `navService` has only one method: `toggle` which enable us to show/hide the nav.
 
 #### `navService.toggle`
 
-Add or remove a class to open/hide the nav with CSS
+Add or remove a class to open/hide the nav with CSS.
 
 ## Contributing
 
