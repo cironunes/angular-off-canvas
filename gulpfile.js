@@ -1,7 +1,5 @@
 var gulp = require('gulp');
-var ngAnnotate = require('gulp-ng-annotate');
-var rename = require('gulp-rename');
-var uglify = require('gulp-uglify');
+var $    = require('gulp-load-plugins')();
 
 var paths = {
   scripts: ['off-canvas.js']
@@ -9,8 +7,8 @@ var paths = {
 
 gulp.task('default', function() {
   return gulp.src(paths.scripts)
-    .pipe(ngAnnotate())
-    .pipe(rename({suffix: '.min'}))
-    .pipe(uglify({mangle: false}))
+    .pipe($.ngAnnotate())
+    .pipe($.rename({suffix: '.min'}))
+    .pipe($.uglify({mangle: false}))
     .pipe(gulp.dest('.'));
 });
