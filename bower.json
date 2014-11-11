@@ -4,7 +4,7 @@
   "authors": [
     "Ciro Nunes <ciroanunes@gmail.com>"
   ],
-  "main": "off-canvas.js",
+  "main": ["off-canvas.js", "off-canvas.css"],
   "license": "MIT",
   "homepage": "http://angular-off-canvas.cironunes.github.io/",
   "ignore": [
