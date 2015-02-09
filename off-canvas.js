@@ -33,8 +33,14 @@ angular.module('cn.offCanvas', [])
 				});
 			}
 
+			function toggle() {
+				this.isOpened = !this.isOpened;
+				container.toggleClass(containerClass);
+			}
+
 			html.then(function(html) {
 				var scope = $rootScope.$new();
+				scope.toggle = toggle;
 				var ctrl = $controller(controller, {$scope: scope});
 				if(controllerAs) {
 					scope[controllerAs] = ctrl;
@@ -44,10 +50,6 @@ angular.module('cn.offCanvas', [])
 				$compile(element)(scope);
 			})
 
-			function toggle() {
-				this.isOpened = !this.isOpened;
-				container.toggleClass(containerClass);
-			}
 
 			return {
 				toggle: toggle,
