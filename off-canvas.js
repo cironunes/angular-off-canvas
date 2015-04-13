@@ -7,7 +7,7 @@
 'use strict';
 
 angular.module('cn.offCanvas', [])
-	.factory('cnOffCanvas', function($compile, $rootScope, $controller, $http, $templateCache, $q) {
+	.factory('cnOffCanvas', ['$compile', '$rootScope', '$controller', '$http', '$templateCache', '$q', function($compile, $rootScope, $controller, $http, $templateCache, $q) {
 		return function (config) {
 
 			if((+!!config.template) + (+!!config.templateUrl) !== 1) {
@@ -54,4 +54,4 @@ angular.module('cn.offCanvas', [])
 				isOpened: false
 			}
 		}
-	});
+	}]);
