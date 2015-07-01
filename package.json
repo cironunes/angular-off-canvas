@@ -23,6 +23,7 @@
     "url": "https://github.com/cironunes/angular-off-canvas/issues"
   },
   "devDependencies": {
+    "bower": "^1.4.1",
     "gulp": "^3.8.7",
     "gulp-load-plugins": "^1.0.0-rc.1",
     "gulp-ng-annotate": "^1.0.0",
