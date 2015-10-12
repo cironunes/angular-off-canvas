@@ -9,20 +9,19 @@
 angular.module('cn.offCanvas', [])
 	.factory('cnOffCanvas', function($compile, $rootScope, $controller, $http, $templateCache, $q) {
 		return function (config) {
-
-			if((+!!config.template) + (+!!config.templateUrl) !== 1) {
-				throw new Error();
-			}
-
 			var container = angular.element(config.container || document.body),
 				containerClass = config.containerClass || 'is-off-canvas-opened',
 				controller = config.controller || angular.noop,
 				controllerAs = config.controllerAs,
 				element = null,
-				html;
+				html, deferred, scope, ctrl;
 
-			if(config.template) {
-				var deferred = $q.defer();
+			if ((+!!config.template) + (+!!config.templateUrl) !== 1) {
+				throw new Error('You must specify either a `template` or a `templateUrl` to create an off-canvas navigation.');
+			}
+
+			if (config.template) {
+				deferred = $q.defer();
 				deferred.resolve(config.template);
 				html = deferred.promise;
 			} else {
@@ -34,9 +33,9 @@ angular.module('cn.offCanvas', [])
 			}
 
 			html.then(function(html) {
-				var scope = $rootScope.$new();
-				var ctrl = $controller(controller, {$scope: scope});
-				if(controllerAs) {
+				scope = $rootScope.$new();
+				ctrl = $controller(controller, {$scope: scope});
+				if (controllerAs) {
 					scope[controllerAs] = ctrl;
 				}
 				element = angular.element(html);

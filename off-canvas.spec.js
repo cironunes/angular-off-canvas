@@ -38,7 +38,7 @@ describe('cnOffCanvas', function() {
     });
 
     it('should throw if called without a `template` or `templateUrl` options', function() {
-      expect(function() { cnOffCanvas({}) }).toThrow();
+      expect(function() { cnOffCanvas({}) }).toThrow(new Error('You must specify either a `template` or a `templateUrl` to create an off-canvas navigation.'));
     });
 
     it('should throw if called with both `template` and `templateUrl` options', function() {
