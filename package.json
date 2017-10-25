@@ -1,6 +1,6 @@
 {
   "name": "angular-off-canvas",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "easily add an off-canvas navigation to your angular app",
   "main": "off-canvas.js",
   "scripts": {
