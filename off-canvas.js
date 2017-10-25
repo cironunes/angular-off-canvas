@@ -14,7 +14,7 @@
 		return angular.isUndefined(val) || val === null;
 	}
 
-	function cnOffCanvas(angular, moment) {
+	function cnOffCanvas(angular) {
 
 		angular.module('cn.offCanvas', [])
         	.factory('cnOffCanvas', function($compile, $rootScope, $controller, $http, $templateCache, $q) {
@@ -65,15 +65,15 @@
         		}
         	});
 
-		return 'cnOffCanvas';
+		return 'cn.OffCanvas';
 	}
 
 	var isElectron = window && window.process && window.process.type;
 	if (typeof define === 'function' && define.amd) {
-		define(['angular', 'moment'], cnOffCanvas);
+		define(['angular'], cnOffCanvas);
 	} else if (typeof module !== 'undefined' && module && module.exports && (typeof require === 'function') && !isElectron) {
-		module.exports = cnOffCanvas(require('angular'), require('moment'));
+		module.exports = cnOffCanvas(require('angular'));
 	} else {
-		cnOffCanvas(angular, (typeof global !== 'undefined' && typeof global.moment !== 'undefined' ? global : window).moment);
+		cnOffCanvas(angular);
 	}
 })();
